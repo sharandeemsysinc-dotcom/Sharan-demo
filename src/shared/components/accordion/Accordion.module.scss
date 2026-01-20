@@ -1,0 +1,15 @@
+/* Accordion styling */
+.title {
+    color: var(--primary-main);
+    font-weight: 500 !important;
+}
+
+.iconContainer {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.iconWrapper {
+  cursor: pointer;
+}

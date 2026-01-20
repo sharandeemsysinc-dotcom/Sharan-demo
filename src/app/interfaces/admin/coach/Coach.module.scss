@@ -1,0 +1,125 @@
+.coachFormBackground {
+  background-color: white;
+  height: auto;
+}
+
+.dividerWrapper {
+  min-height: 250px;
+  /* << add this line */
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.fullHeightDivider {
+  height: 100%;
+  border-color: var(--primary-main) !important;
+  border-width: 1px !important;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 0;
+}
+
+/* Text block */
+.text .title {
+  margin-bottom: 2px;
+}
+
+/* Button alignment */
+.action {
+  display: flex;
+  align-items: center;
+}
+
+.dividerWrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider {
+  width: 2px;
+  height: 75%;
+  background-color: var(--primary-main) !important;
+}
+
+@media (max-width: 900px) {
+  .dividerWrapper {
+    display: none !important;
+  }
+}
+
+/* ------ Responsive Styles ------ */
+
+/* Mobile View */
+@media (max-width: 450px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+// ---------------- For Coach Page Scss Starts --------------------- //
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  background: var(--white-main);
+  padding: 25px 20px 0 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+.buttonTab {
+  width: 90% !important;
+  margin: 0 auto;
+}
+
+.leftTab {
+  border-radius: 8px 0 0 8px !important; // round left corners
+}
+
+.middleTab {
+  border-radius: 0 !important;
+}
+
+.rightTab {
+  border-radius: 0 8px 8px 0 !important; // round right corners
+}
+
+.tableBorderRadius {
+  border-radius: 0 0 8px 8px !important;
+}
+
+// ---------------- For Coach Page Scss Ends --------------------- 
+
+.dialogRow {
+  display: grid;
+  gap: 5px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.coachEvaluation {
+  grid-template-columns: clamp(150px, 10vw, 280px) 10px 1fr;
+}
+
+.clientEvaluation {
+  grid-template-columns: clamp(150px, 15vw, 280px) 10px 1fr;
+}
+
+@media (max-width: 500px) {
+  .coachEvaluation {
+    grid-template-columns: 1fr;
+  }
+
+  .clientEvaluation {
+    grid-template-columns: 1fr;
+  }
+}

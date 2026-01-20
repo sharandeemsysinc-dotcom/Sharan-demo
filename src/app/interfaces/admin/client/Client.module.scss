@@ -1,0 +1,97 @@
+.coachFormBackground {
+  background-color: white;
+  height: auto;
+}
+
+.dividerWrapper {
+  min-height: 250px;
+  /* << add this line */
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.fullHeightDivider {
+  height: 100%;
+  border-color: var(--primary-main) !important;
+  border-width: 1px !important;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 0;
+}
+
+/* Text block */
+.text .title {
+  margin-bottom: 2px;
+}
+
+/* Button alignment */
+.action {
+  display: flex;
+  align-items: center;
+}
+
+.dividerWrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider {
+  width: 2px;
+  height: 75%;
+  background-color: var(--primary-main) !important;
+}
+
+@media (max-width: 900px) {
+  .dividerWrapper {
+    display: none !important;
+  }
+}
+
+/* ------ Responsive Styles ------ */
+
+/* Mobile View */
+@media (max-width: 450px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+
+// Coach table css starts
+.coachContainer {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.coachItem {
+  display: inline-flex;
+  align-items: center;
+}
+
+.coachName {
+  cursor: pointer;
+  color: var(--primary-main);
+  font-weight: 500;
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.separator {
+  margin: 0 10px;
+  color: #000;
+  font-weight: 400;
+}

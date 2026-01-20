@@ -1,0 +1,76 @@
+// Import Packages
+import { Controller } from "react-hook-form";
+import { TimePicker } from "@mui/x-date-pickers/TimePicker";
+import { FormControl, FormLabel } from "@mui/material";
+
+// Import Files
+import timePickerCss from './FormFields.module.scss'
+interface Props {
+    name: string;
+    label: string;
+    placeholder: string
+    variant?: "outlined" | "filled" | "standard" | "labeled";
+    size?: "small" | "normal";
+    control: any;
+    errors?: any;
+    required?: boolean
+    disabled?: boolean
+    onChange?: (value: any) => void;
+}
+
+export default function InputTimePicker({ name, label, placeholder, variant = 'outlined',  size = "small", control, errors, required = false,
+    disabled = false, onChange }: Props) {
+    const isLabeled = variant === "labeled";
+    const variantValue = !isLabeled ? variant : "outlined";
+        // Map size prop to MUI size
+    const muiSize = size === "small" ? "small" : undefined; // undefined = normal MUI size
+
+    return (
+        <FormControl fullWidth error={!!errors?.[name]}>
+            {isLabeled && (
+                <FormLabel className="formLabel">{
+                    required ? (
+                        <span>
+                            <span className={timePickerCss.required}>*</span> {label}
+                        </span>
+                    ) : (label)
+                }
+                </FormLabel>
+            )}
+            <Controller
+                name={name}
+                control={control}
+                render={({ field }) => (
+                    <TimePicker
+                        {...field}
+                        label={
+                            isLabeled ? undefined :
+                                required ? (
+                                    <span>
+                                        <span className={timePickerCss.required}>*</span> {label}
+                                    </span>
+                                ) : (label)
+                        }
+                        className={`${timePickerCss.error}`}
+                        disabled={disabled}
+                        slotProps={{
+                            textField: {
+                                id: name,
+                                fullWidth: true,
+                                error: !!errors?.[name],
+                                helperText: errors?.[name]?.message,
+                                placeholder: placeholder,
+                                variant: variantValue,
+                                size:muiSize
+                            },
+                        }}
+                        onChange={(e) => {
+                            field.onChange(e);
+                            onChange && onChange(e);
+                        }}
+                    />
+                )}
+            />
+        </FormControl>
+    );
+}

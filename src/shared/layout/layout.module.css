@@ -1,0 +1,9 @@
+.main {
+    height: 92vh;
+    overflow: auto;
+    padding: 2px 20px !important;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}

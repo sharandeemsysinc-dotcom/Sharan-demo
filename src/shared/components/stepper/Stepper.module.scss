@@ -1,0 +1,65 @@
+/* Stepper styles */
+.stepContent {
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* base icon size */
+.stepIcon {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+/* active step icon */
+.stepIcon.Mui-active {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+/* completed step icon */
+.stepIcon.Mui-completed {
+  width: 44px !important;
+  height: 44px !important;
+}
+.progressText {
+  text-align: right;
+  margin-top: 4px !important;
+}
+.progressWrapper {
+  position: relative;
+  padding: 0 12px; // ✅ LEFT & RIGHT padding
+}
+
+.dashedProgress {
+  height: 10px;
+  border-radius: 6px;
+  background-image: repeating-linear-gradient(
+    to right,
+    #cfcfcf,
+    #cfcfcf 8px,
+    transparent 8px,
+    transparent 14px
+  );
+
+  & .MuiLinearProgress-bar {
+    background-color: #1976d2;
+    border-radius: 6px;
+  }
+}
+
+.progressText {
+  position: absolute;
+  top: -35px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1976d2;
+  white-space: nowrap;
+  transition: left 0.3s ease;
+}
+
+.stepContent {
+  margin-top: 16px;
+}
