@@ -1,0 +1,247 @@
+.MuiDrawer-paper {
+  border-right: none !important;
+}
+
+.MuiDrawer-paper:hover {
+  border-right: none !important;
+}
+
+.MuiTooltip-tooltip {
+  background-color: var(--primary-main) !important;
+  color: var(--white-main) !important;
+  font-size: 12px !important;
+  padding: 8px 10px !important;
+  border-radius: 6px !important;
+}
+
+/*  ------------------- Header css start --------------------- */
+.headContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 0;
+}
+
+.text .title {
+  margin-bottom: 2px;
+}
+
+.back {
+  margin-right: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 450px) {
+  .headContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+/* ------------------------- Header css ends ---------------------- */
+
+/* ------------------------- Form Css Starts ---------------------- */
+.formContainer {
+  background: var(--white-main);
+  padding: 50px 100px;
+  border-radius: 10px;
+}
+
+.formTitle {
+  text-align: center;
+  margin-bottom: 50px !important;
+  font-weight: 600 !important;
+}
+
+.formContent {
+  margin-bottom: 40px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formLeft .formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  font-weight: 400 !important;
+  margin-bottom: 6px !important;
+  color: var(--customThird-main) !important;
+}
+
+.dividerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 50px 0px;
+}
+
+.divider {
+  width: 1px;
+  background-color: var(--primary-main);
+}
+
+.photoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 50px;
+}
+
+.profileImage {
+  width: 120px !important;
+  height: 120px !important;
+}
+
+.submitWrapper {
+  text-align: center;
+}
+
+.submitBtn {
+  width: 120px;
+  background-color: var(--primary-main);
+  text-transform: none;
+}
+
+@media (max-width: 900px) {
+  .formContainer {
+    padding: 25px 20px;
+  }
+
+  .dividerWrapper {
+    display: none;
+  }
+
+  .photoSection {
+    margin-top: 0px;
+  }
+}
+
+/* -------------------- Form Css Ends --------------------- */
+
+/* -------------------- Profile Page Css Starts --------------------- */
+.bodyContainer {
+  padding: 15px 30px !important;
+}
+
+.profileCardTitle {
+  text-align: start;
+  font-weight: 600 !important;
+  background-color: var(--primary-main);
+  border-radius: 10px 10px 0px 0px;
+  padding: 0.2rem 0 0.2rem 1rem;
+}
+
+.profileContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.chip {
+  padding: 1px 15px;
+  border: 1px solid var(--primary-main);
+  background-color: #00907821;
+  border-radius: 5px;
+  width: max-content;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+}
+
+.profileData {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profileRow {
+  display: grid;
+  grid-template-columns: clamp(150px, 30vw, 285px) 10px 1fr;
+  gap: 5px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.clientLabel {
+  font-weight: 600;
+  color: var(--primary-main);
+}
+
+.colon {
+  text-align: center;
+  font-weight: 600;
+}
+
+.clientValue {
+  word-break: break-word;
+}
+
+.link {
+  color: var(--menuText-main);
+}
+
+.cardPadding {
+  padding: 0 0 20px 0 !important;
+}
+
+.fullSizeRow {
+  display: grid;
+  grid-template-columns: clamp(45px, 30vw, 750px) 10px 1fr;
+  gap: 5px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+@media (max-width: 599px) {
+  .bodyContainer {
+    padding: 25px 15px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .profileRow {
+    grid-template-columns: 1fr;
+  }
+
+  .colon {
+    display: none;
+  }
+
+  .fullSizeRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------- Profile Page Css Ends --------------------- */
+
+.starIcon {
+  color: var(--starColor-main) !important;
+  font-size: 18px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}

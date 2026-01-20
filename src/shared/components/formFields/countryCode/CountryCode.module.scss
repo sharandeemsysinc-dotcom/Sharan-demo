@@ -1,0 +1,25 @@
+/* Wrapper */
+.container {
+    width: 100%;
+    margin-top: 1px;
+    border: 1px solid #c4c4c4 !important; 
+}
+
+/* Phone input field */
+.input {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+
+    border-style: none;
+    cursor: pointer;
+    padding-left: 48px; // space for flag
+    // margin-top: 2px;
+       &:focus {
+        border-color: var(--focusElement-main) !important;
+        box-shadow: 0 0 5px var(--focusElement-main);
+        
+    }
+}
+
+/* Flag dropdown button */

@@ -1,0 +1,170 @@
+.receipt-container {
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: var(--primary-main);
+    color: white;
+    padding: 8px;
+    width: 44%;
+    margin-bottom: 26px;
+    margin-left: 25%;
+
+}
+
+.receipt-details {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.receipt-details td {
+    padding: 2px 10px;
+    font-size: 14px;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.receipt-details .label {
+    font-weight: bold;
+    text-align: left;
+    white-space: nowrap;
+    width: 16%;
+    font-size: 14px;
+}
+
+.changeLabelStyle {
+    float: right;
+}
+
+.receipt-details .field {
+    text-align: left;
+}
+
+.receipt-details tr:first-child td {
+    padding-bottom: 20px;
+}
+
+.receipt-details tr:not(:first-child) td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.membership-table,
+.discount-table,
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.membership-table th,
+.membership-table td,
+.discount-table th,
+.discount-table td,
+.payment-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.membership-table th,
+.discount-table th {
+    font-weight: bold;
+}
+
+.total-payable {
+    font-weight: bold;
+    text-align: right;
+}
+
+.final-amount {
+    font-weight: bold;
+    color: red;
+}
+
+.logoemail {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logoemail img {
+    width: 200px;
+    height: 139px;
+    object-fit: scale-down;
+
+}
+
+.header-content {
+    text-align: center;
+    font-size: 14px;
+}
+
+.header-content {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header-content h1 {
+    margin: 10px 0 5px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+.header-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+    font-size: 14px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between !important;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Divider Line */
+.divider {
+    border-bottom: 2px solid #000000;
+    margin: 10px 0;
+}
+
+.note {
+    margin-top: 0px;
+    font-size: 12px;
+    text-align: justify;
+}
+
+.authorised {
+    margin-top: 30px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.discount {
+    text-align: start;
+}
+
+.membership {
+    text-align: end;
+}

@@ -1,0 +1,6 @@
+export { Coach } from './UI/Coach'
+export { CoachDetails } from './UI/CoachDetails'
+export { CoachProfile } from './UI/CoachProfile'
+export { CoachTypes } from './UI/CoachTypes'
+export { CoachEvaluation } from './UI/CoachEvaluation'
+// export { CoachClient } from './UI/CoachClient'

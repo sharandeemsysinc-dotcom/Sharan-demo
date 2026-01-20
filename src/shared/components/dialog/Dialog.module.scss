@@ -1,0 +1,57 @@
+.dialogPaper {
+  border-radius: 12px !important;
+  padding: 8px !important;
+  min-width: 420px;
+}
+ 
+/* HEADER */
+.header {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  padding: 16px 20px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border-bottom: 1px solid #e9e9e9;
+}
+ 
+.closeBtn {
+  color: #555 !important;
+ 
+  &:hover {
+    color: #000 !important;
+    background: #f1f1f1 !important;
+  }
+}
+ 
+/* CONTENT */
+.content {
+  padding: 16px 22px !important;
+}
+ 
+.message {
+  margin-bottom: 30px !important;
+  color: #555 !important;
+  line-height: 1.5;
+}
+ 
+.customComponent {
+  margin-top: 8px;
+}
+ 
+/* ACTIONS */
+.actions {
+  padding: 12px 20px !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  border-top: 1px solid #e9e9e9;
+}
+.actionsRight {
+  padding: 12px 20px !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  gap: 10px !important;
+  border-top: 1px solid #e9e9e9;
+}
+ 
