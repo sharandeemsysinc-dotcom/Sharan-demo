@@ -5,15 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui"
   },
   "dependencies": {
-    "@dytesdk/react-ui-kit": "^3.0.8",
-    "@dytesdk/react-web-core": "^3.1.11",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@hookform/resolvers": "^5.2.2",
@@ -23,7 +21,6 @@
     "@reduxjs/toolkit": "^2.9.2",
     "bootstrap": "^5.3.8",
     "dayjs": "^1.11.19",
-    "html2pdf.js": "^0.12.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-hook-form": "^7.66.1",
