@@ -1,0 +1,20 @@
+.tabPanel {
+  min-height: 120px;
+}
+
+.customTab {
+  color: var(--menuText-main) !important;
+  transition: 0.3s !important;
+  text-transform: none !important; // Optional: usually desired for custom tabs
+  font-weight: 600 !important;
+
+  &:global(.Mui-selected) {
+    color: var(--tab-active-color) !important;
+  }
+}
+
+.customTabs {
+  :global(.MuiTabs-indicator) {
+    background-color: var(--indicator-color) !important;
+  }
+}

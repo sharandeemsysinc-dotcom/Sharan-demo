@@ -1,0 +1,309 @@
+.sidebarWrapper {
+  display: flex;
+
+  :global(.MuiDrawer-paper) {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    scrollbar-width: none !important;
+    background-color: var(--sidebarBgColor-main);
+    -ms-overflow-style: none !important;
+
+    &::-webkit-scrollbar {
+      display: none !important;
+    }
+  }
+}
+
+// Logo styles
+.logoContainer {
+  text-align: center;
+  padding: 16px 16px 0 0;
+}
+
+.logo {
+  width: 120px;
+  margin: auto;
+  transition: 0.8s;
+}
+
+// User container styles
+.userContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 16px;
+  background-color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  max-width: 350px;
+}
+
+.avatarBackground {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #0A2B50;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(10, 43, 80, 0.25);
+  margin-right: 16px;
+}
+
+.profileName {
+  font-size: 16px !important;
+}
+
+.profileMail {
+  font-size: 10px !important;
+  color: var(--secondary-main);
+}
+
+// Menu label styles
+.menuLabel {
+  margin-left: 24px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #6B7280 !important;
+  margin-top: 20px !important;
+}
+
+// Menu items styles
+.items {
+  :global(.MuiList-root) {
+    padding-top: 0px !important;
+  }
+
+  &.openSidebar :global(.MuiList-root) {
+    padding-top: 0px !important;
+  }
+}
+
+.menuItems {
+  min-height: 48px !important;
+  justify-content: center !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  border-radius: 8px !important;
+  padding: 4px 16px;
+  margin: 4px !important;
+  background-color: transparent !important;
+  color: #4A5568 !important;
+  transition: all 0.3s ease !important;
+
+  &:global(.MuiListItemButton-root) {
+    padding-left: 13px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    min-height: 40px !important;
+  }
+
+  &:hover {
+    background-color: #F1F5F9;
+  }
+
+  &.open {
+    justify-content: initial !important;
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+  }
+
+  &.active {
+    background-color: var(--primary-main) !important;
+    color: var(--white-main) !important;
+    font-weight: 600 !important;
+
+    .menuLabelItems span {
+      color: var(--white-main) !important;
+    }
+
+    &:hover {
+      background-color: var(--primary-main) !important;
+    }
+  }
+}
+
+// Menu button styles
+.menuButton {
+  min-width: 0;
+  justify-content: center;
+  transition: color 0.3s ease;
+  color: #4A5568;
+
+  &.menuButtonOpen {
+    justify-content: start;
+  }
+
+  &.menuButtonActive,
+  &.active {
+    color: var(--white-main) !important;
+    // margin-right: auto;
+  }
+}
+
+.subMenuButton {
+  min-width: 35px !important;
+  justify-content: center;
+  transition: color 0.3s ease;
+  color: #4A5568;
+
+  &.menuButtonActive {
+    color: var(--white-main) !important;
+  }
+}
+
+// Menu label items
+.menuLabelItems {
+  opacity: 0;
+  transform: translateX(-10px) !important;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+  color: var(--menuText-main) !important;
+
+  span {
+    font-weight: 500 !important;
+  }
+
+  &.menuLabelItemsOpen {
+    opacity: 1;
+    transform: translateX(0) !important;
+  }
+}
+
+// Arrow icon
+.arrowIcon {
+  min-width: 32px !important;
+  display: flex;
+  justify-content: flex-end;
+  color: #aaa;
+}
+
+// Submenu items
+.subMenuItems {
+  &:global(.MuiListItemButton-root) {
+    padding-left: 8px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    min-height: 40px !important;
+    border-radius: 8px;
+    color: #6B7280;
+  }
+
+  &:hover {
+    background-color: #F1F5F9;
+  }
+
+  &.active {
+    background-color: var(--primary-main) !important;
+    color: var(--white-main) !important;
+
+    .menuLabelItems span {
+      color: var(--white-main) !important;
+    }
+  }
+}
+
+// Drawer styles
+.drawerPaper {
+  // Removed fixed positioning - let MUI handle it
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.desktopClosed {
+    min-height: auto !important;
+    padding: 8px 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+
+  &.desktopOpen {
+    min-height: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &.mobileDrawerHeader {
+    min-height: 64px;
+    justify-content: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.logoMini {
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+// Mobile menu button
+.mobileMenuButtonContainer {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 1300;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.mobileMenuButton {
+  background-color: var(--background-paper) !important;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15) !important;
+
+  &:hover {
+    background-color: var(--action-hover) !important;
+  }
+}
+
+// Mobile drawer
+.mobileDrawer {
+  :global(.MuiDrawer-paper) {
+    width: 270px;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+// Additional helper classes
+.listItemBlock {
+  display: block;
+}
+
+.nestedList {
+  padding-left: 46px !important;
+  padding-right: 10px !important;
+}
+
+// Global styles for drawer hover effect
+:global {
+  .MuiDrawer-root:hover .sidebar-text {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+
+  .MuiDrawer-root .sidebar-text {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+}
